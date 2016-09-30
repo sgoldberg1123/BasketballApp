@@ -1,86 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false">
 
-    <ImageView
-        android:layout_width="386dp"
-        android:layout_height="336dp"
-        android:id="@+id/newPlayerImage" />
-
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:id="@+id/playerInfo">
+        android:layout_weight="1">
 
-        <EditText
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/playerPhoto"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/btnUpload"
+            android:contentDescription="@string/playerImageDesc" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnCameraString"
+            android:id="@+id/btnCamera"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnUploadString"
+            android:id="@+id/btnUpload"
+            android:layout_alignBottom="@+id/btnCamera"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/btnCamera"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="@string/newPlayerNameEntry"
+            android:text="@string/playerName"
             android:ems="10"
-            android:id="@+id/playerName"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/editPlayerName"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/positionTextView"
-            android:id="@+id/positionText" />
+            android:text="@string/positionLabel"
+            android:id="@+id/textView"
+            android:layout_below="@+id/editPlayerName"
+            android:layout_alignParentStart="true" />
 
         <Spinner
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/playerPosition"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/spinner"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal">
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberPicker"
+            android:layout_below="@+id/spinner"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/textView2" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/playerNumberText"
-                android:id="@+id/textView"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnDeletePlayerString"
+            android:id="@+id/button"
+            android:layout_alignBottom="@+id/numberPicker"
+            android:layout_alignParentStart="true" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/btnSavePlayer"
-                android:id="@+id/button"
-                android:layout_alignParentStart="true"
-                android:layout_above="@+id/button2"
-                android:layout_toStartOf="@+id/playerNumberPicker" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnCreatePlayerString"
+            android:id="@+id/button2"
+            android:layout_above="@+id/button"
+            android:layout_alignParentStart="true" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/btnDeletePlayer"
-                android:id="@+id/button2"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/playerNumberPicker" />
-
-            <NumberPicker
-                android:layout_width="148dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerNumberPicker"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:orientation="vertical"
-                android:transitionGroup="false" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/playerNumber"
+            android:id="@+id/textView2"
+            android:layout_alignTop="@+id/numberPicker"
+            android:layout_toEndOf="@+id/button2" />
+    </RelativeLayout>
 </LinearLayout>

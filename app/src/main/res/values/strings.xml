@@ -5,4 +5,12 @@
     <string name="playerNumberText">Player Number:</string>
     <string name="btnSavePlayer">Save Player</string>
     <string name="btnDeletePlayer">Delete Player</string>
+    <string name="btnCameraString">Camera</string>
+    <string name="btnUploadString">Upload Photo</string>
+    <string name="playerImageDesc">Player\'s Image</string>
+    <string name="playerName">Player name</string>
+    <string name="positionLabel">Position:</string>
+    <string name="btnDeletePlayerString">Delete Player</string>
+    <string name="btnCreatePlayerString">Create Player</string>
+    <string name="playerNumber">Player Number:</string>
 </resources>
