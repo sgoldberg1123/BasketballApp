@@ -14,9 +14,10 @@ public class Player implements Parcelable {
     private int playerNum;
     private PlayerStatistics playerStats;
 
-    public  Player(String firstName, String lastName){
+    public Player(String firstName, String lastName, int playerNum){
         this.firstName = firstName;
         this.lastName = lastName;
+        this.playerNum = playerNum;
     }
     protected Player(Parcel in){
         firstName = in.readString();

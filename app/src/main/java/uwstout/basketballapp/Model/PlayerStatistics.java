@@ -18,6 +18,15 @@ public class PlayerStatistics implements Parcelable {
     private int losses;
     private int pointsScored;
 
+    public PlayerStatistics(int misses, int hits, int passes, int wins, int losses, int pointsScored){
+        this.misses = misses;
+        this.hits = hits;
+        setShotAccuracyPercent(hits/(misses+hits));
+        this.passes = passes;
+        this.wins = wins;
+        this.losses = losses;
+        this.pointsScored = pointsScored;
+    }
     protected PlayerStatistics(Parcel in){
         misses = in.readInt();
         hits = in.readInt();
