@@ -12,17 +12,20 @@ public class Player implements Parcelable {
     private String firstName;
     private String lastName;
     private int playerNum;
+    private String position;
     private PlayerStatistics playerStats;
 
-    public Player(String firstName, String lastName, int playerNum){
+    public Player(String firstName, String lastName, int playerNum, String position){
         this.firstName = firstName;
         this.lastName = lastName;
         this.playerNum = playerNum;
+        this.position = position;
     }
     protected Player(Parcel in){
         firstName = in.readString();
         lastName = in.readString();
         playerNum = in.readInt();
+        position = in.readString();
         playerStats = in.readParcelable(PlayerStatistics.class.getClassLoader());
     }
 
@@ -48,6 +51,7 @@ public class Player implements Parcelable {
         dest.writeString(firstName);
         dest.writeString(lastName);
         dest.writeInt(playerNum);
+        dest.writeString(position);
         dest.writeParcelable(playerStats,flags);
     }
 
@@ -74,6 +78,10 @@ public class Player implements Parcelable {
     public void setPlayerNum(int playerNum) {
         this.playerNum = playerNum;
     }
+
+    public String getPosition() { return position; }
+
+    public void setPosition(String position) { this.position = position; }
 
     public PlayerStatistics getPlayerStats() {
         return playerStats;
