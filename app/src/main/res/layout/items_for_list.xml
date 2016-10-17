@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:text="12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/NumbertextView"
+        android:textSize="51dp"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/firstNametextView" />
+
+    <TextView
+        android:text="Point Guard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PositiontextView"
+        android:paddingLeft="10dp"
+        android:layout_alignBaseline="@+id/NumbertextView"
+        android:layout_alignBottom="@+id/NumbertextView"
+        android:layout_toEndOf="@+id/NumbertextView" />
+
+    <TextView
+        android:text="Kayla"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:id="@+id/firstNametextView"
+        android:layout_above="@+id/PositiontextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Bowe"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastNametextView"
+        android:layout_above="@+id/PositiontextView"
+        android:layout_toEndOf="@+id/PositiontextView" />
+
+
+</RelativeLayout>
