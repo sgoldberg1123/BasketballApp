@@ -8,8 +8,17 @@
     <string name="btnCameraString">Camera</string>
     <string name="btnUploadString">Upload Photo</string>
     <string name="playerImageDesc">Player\'s Image</string>
-    <string name="playerName">Player name</string>
+    <string name="playerName">Player Name</string>
+
     <string name="positionLabel">Position:</string>
+    <string-array name="position_collection">
+        <item>Point Guard</item>
+        <item>Shooting Guard</item>
+        <item>Small Forward</item>
+        <item>Power Forward</item>
+        <item>Center</item>
+    </string-array>
+
     <string name="btnDeletePlayerString">Delete Player</string>
     <string name="btnCreatePlayerString">Create Player</string>
     <string name="playerNumber">Player Number:</string>
